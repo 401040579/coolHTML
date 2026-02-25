@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COOL HTML</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Three.js Background Canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- ====== SECTION 1: Hero ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="glitch" data-text="COOL HTML">COOL HTML</h1>
+      <p class="subtitle">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </p>
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 2: Morphing Geometry ====== -->
+  <section class="morph-section" id="morph">
+    <canvas id="morphCanvas"></canvas>
+    <div class="morph-text">
+      <h2 class="reveal-text">GEOMETRY</h2>
+      <p class="reveal-text sub">Shapes in constant evolution</p>
+    </div>
+    <div class="morph-progress">
+      <div class="morph-label">SPHERE</div>
+      <div class="morph-bar"><div class="morph-bar-fill" id="morphBarFill"></div></div>
+      <div class="morph-label">ICOSAHEDRON</div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 3: Particle Playground ====== -->
+  <section class="particles-section" id="particles">
+    <canvas id="particleCanvas"></canvas>
+    <div class="particles-overlay" id="particlesOverlay">
+      <h2>MOVE YOUR MOUSE</h2>
+      <p>or touch the screen</p>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 4: Glassmorphism Cards ====== -->
+  <section class="cards-section" id="cards">
+    <h2 class="section-title reveal-text">PURE VIBES</h2>
+    <div class="cards-grid">
+      <div class="glass-card" data-tilt>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3>SPEED</h3>
+        <p>60fps smooth animations</p>
+        <div class="card-glow"></div>
+      </div>
+      <div class="glass-card" data-tilt>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>BEAUTY</h3>
+        <p>Pixels crafted with care</p>
+        <div class="card-glow"></div>
+      </div>
+      <div class="glass-card" data-tilt>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+            <line x1="14" y1="4" x2="10" y2="20"/>
+          </svg>
+        </div>
+        <h3>CODE</h3>
+        <p>Zero frameworks needed</p>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 5: Number Counter ====== -->
+  <section class="counter-section" id="counter">
+    <div class="counter-grid">
+      <div class="counter-item">
+        <span class="counter-number" data-target="10000">0</span>
+        <span class="counter-plus">+</span>
+        <span class="counter-label">PARTICLES</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-number" data-target="60">0</span>
+        <span class="counter-unit">FPS</span>
+        <span class="counter-label">SMOOTH</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-number" data-target="0">0</span>
+        <span class="counter-unit"></span>
+        <span class="counter-label">FRAMEWORKS</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-number" data-target="100">0</span>
+        <span class="counter-unit">%</span>
+        <span class="counter-label">CSS + JS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 6: Infinite Marquee ====== -->
+  <section class="marquee-section" id="marquee">
+    <div class="marquee-row">
+      <div class="marquee-track marquee-left">
+        <span>HTML5 &bull; CSS3 &bull; JavaScript &bull; Three.js &bull; GSAP &bull; Canvas API &bull; WebGL &bull; Particles &bull; Glassmorphism &bull; Neon &bull; </span>
+        <span>HTML5 &bull; CSS3 &bull; JavaScript &bull; Three.js &bull; GSAP &bull; Canvas API &bull; WebGL &bull; Particles &bull; Glassmorphism &bull; Neon &bull; </span>
+      </div>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track marquee-right">
+        <span>NO BUILD STEP &bull; NO BUNDLER &bull; PURE MAGIC &bull; ZERO DEPS &bull; GPU POWERED &bull; SCROLL DRIVEN &bull; MOUSE REACTIVE &bull; </span>
+        <span>NO BUILD STEP &bull; NO BUNDLER &bull; PURE MAGIC &bull; ZERO DEPS &bull; GPU POWERED &bull; SCROLL DRIVEN &bull; MOUSE REACTIVE &bull; </span>
+      </div>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track marquee-left marquee-outline">
+        <span>COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; </span>
+        <span>COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; COOL HTML &bull; </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 7: Footer ====== -->
+  <footer class="footer" id="footer">
+    <div class="footer-line"></div>
+    <p class="footer-text">Built with <span class="gradient-text">0 frameworks</span> and mass vibes</p>
+    <p class="footer-sub">HTML + CSS + JS = All you need</p>
+    <button class="back-to-top" id="backToTop">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
