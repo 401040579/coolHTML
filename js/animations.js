@@ -184,6 +184,71 @@
     },
   });
 
+  // ---- Audio Overlay Text ----
+  gsap.to('.audio-overlay h2', {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.audio-section',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
+    },
+  });
+
+  gsap.to('.audio-overlay .sub', {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.audio-section',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
+    },
+  });
+
+  // ---- Black Hole Overlay Text ----
+  gsap.to('.blackhole-overlay h2', {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.blackhole-section',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
+    },
+  });
+
+  gsap.to('.blackhole-overlay .sub', {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.blackhole-section',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
+    },
+  });
+
+  // ---- Magnetic Hint Text ----
+  gsap.to('.magnetic-hint', {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.magnetic-section',
+      start: 'top 70%',
+      toggleActions: 'play none none reverse',
+    },
+  });
+
   // ---- Back to Top ----
   document.getElementById('backToTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

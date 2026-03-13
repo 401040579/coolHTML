@@ -616,6 +616,205 @@ body {
   box-shadow: 0 0 20px rgba(0,245,255,0.3);
 }
 
+/* ===== Matrix Section ===== */
+.matrix-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+#matrixCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.matrix-fade-top,
+.matrix-fade-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.matrix-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+}
+
+.matrix-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+
+/* ===== Audio Visualizer Section ===== */
+.audio-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#audioCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.audio-overlay {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.audio-overlay h2 {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  background: linear-gradient(135deg, var(--cyan), var(--magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.audio-overlay .sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* ===== Black Hole Section ===== */
+.blackhole-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+#blackholeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blackhole-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.blackhole-overlay h2 {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--white);
+  text-shadow: 0 0 40px var(--purple), 0 0 80px var(--purple);
+}
+
+.blackhole-overlay .sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* ===== Synthwave Section ===== */
+.synthwave-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#synthwaveCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.synthwave-overlay {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.synthwave-title {
+  font-family: var(--font-mono);
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  background: linear-gradient(to bottom, #ffee00, #ff6ec7, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 128, 0.5));
+  line-height: 1;
+}
+
+.synthwave-sub {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 3vw, 2rem);
+  letter-spacing: 1em;
+  color: rgba(255, 110, 199, 0.6);
+  margin-top: 0.5rem;
+}
+
+/* ===== Magnetic Text Section ===== */
+.magnetic-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.magnetic-text {
+  font-family: var(--font-mono);
+  font-size: clamp(3rem, 12vw, 10rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.magnetic-char {
+  display: inline-block;
+  transition: color 0.15s, text-shadow 0.15s;
+  will-change: transform;
+}
+
+.magnetic-hint {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-top: 2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
 /* ===== Reveal Animation Base ===== */
 .reveal-text {
   opacity: 0;
